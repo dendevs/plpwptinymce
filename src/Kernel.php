@@ -1,6 +1,5 @@
 <?php
 namespace DenDev\Plpkernel;
-require_once 'vendor/autoload.php';
 use Pimple\Container;
 
 class Kernel

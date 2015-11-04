@@ -13,7 +13,7 @@
             "email": "dendev.mobile@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "DenDev\\Plpkernel\\": "src"

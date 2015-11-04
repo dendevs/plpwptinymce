@@ -1,9 +1,8 @@
 {
-    "name": "dendev/plpkernel",
-    "description": "kernel for pulpy project",
+    "name": "dendev/plpskeleton",
+    "description": "skeleton for pulpy project",
     "type": "libs",
     "require": {
-        "pimple/pimple": "^3.0"
     },
     "require-dev": {
     },
@@ -16,7 +15,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "DenDev\\Plpkernel\\": "src"
+            "DenDev\\Plpskeleton\\": "src"
         }
     }
 }

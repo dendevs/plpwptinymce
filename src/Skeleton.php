@@ -3,12 +3,12 @@ namespace DenDev\Plpskeleton;
 
 class Skeleton
 {
-	public function __construct()
-	{
-	}
+    public function __construct()
+    {
+    }
 
-	public function todo()
-	{
-		echo "exist";
-	}
+    public function todo()
+    {
+        echo "exist";
+    }
 }

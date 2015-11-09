@@ -13,8 +13,8 @@ class Tinymce
         $this->_button = new Button();
     }
 
-    public function add_button()
+    public function add_button( $button_name )
     {
-        $this->_button->add_button();
+        $this->_button->add_button( $button_name );
     }
 }

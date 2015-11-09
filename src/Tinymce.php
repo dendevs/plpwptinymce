@@ -1,8 +1,8 @@
 <?php
-namespace DenDev\Plpwpskeleton;
+namespace DenDev\Plpwptinymce;
 
 
-class Skeleton
+class Tinymce
 {
     public function __construct()
     {

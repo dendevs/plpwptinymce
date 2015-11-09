@@ -1,6 +1,6 @@
 {
-    "name": "dendev/plpwpskeleton",
-    "description": "skeleton for pulpy project",
+    "name": "dendev/plpwptinymce",
+    "description": "tinymce for pulpy project",
     "type": "libs",
     "require": {
     },
@@ -15,7 +15,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "DenDev\\Plpwpskeleton\\": "src"
+            "DenDev\\Plpwptinymce\\": "src"
         }
     }
 }

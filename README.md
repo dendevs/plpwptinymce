@@ -1,5 +1,5 @@
-# PlpSkeleton
+# PlpTinymce
 
-skeleton for puplpy modules project
+add button on Tinymce in wp
 
-[![Build Status](https://travis-ci.org/dendevs/plpkernel.svg)](https://travis-ci.org/dendevs/plpkernel)
+[![Build Status](https://travis-ci.org/dendevs/plptinymce.svg)](https://travis-ci.org/dendevs/plptinymce)

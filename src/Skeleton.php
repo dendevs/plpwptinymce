@@ -1,5 +1,6 @@
 <?php
-namespace DenDev\Plpskeleton;
+namespace DenDev\Plpwpskeleton;
+
 
 class Skeleton
 {

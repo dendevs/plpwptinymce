@@ -9,5 +9,9 @@ php:
 before_script:
   - composer self-update
   - composer install --prefer-source --no-interaction --dev
+  - mysql -e "CREATE DATABASE IF NOT EXISTS wptest;" -uroot
+  - mysql -e "CREATE USER 'wptest'@'localhost'";
+  - mysql -e "SET password FOR 'wptest'@'localhost' = password('wptest')";
+  - mysql -e "GRANT ALL ON wptest.* TO 'wptest'@'localhostr'";
  
 script: phpunit

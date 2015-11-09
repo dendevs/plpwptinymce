@@ -1,5 +1,5 @@
 {
-    "name": "dendev/plpskeleton",
+    "name": "dendev/plpwpskeleton",
     "description": "skeleton for pulpy project",
     "type": "libs",
     "require": {
@@ -15,7 +15,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "DenDev\\Plpskeleton\\": "src"
+            "DenDev\\plpwpskeleton\\": "src"
         }
     }
 }

@@ -13,5 +13,6 @@ before_script:
   - mysql -e "CREATE USER 'wptest'@'localhost'";
   - mysql -e "SET password FOR 'wptest'@'localhost' = password('wptest')";
   - mysql -e "GRANT ALL ON wptest.* TO 'wptest'@'localhostr'";
+  - sh ./bin/install-wp-tests.sh wptest wptest wptest localhost latest 
  
 script: phpunit

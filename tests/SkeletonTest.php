@@ -1,4 +1,6 @@
 <?php
+namespace DenDev\Plpwpskeleton\Test;
+//require 'src/Skeleton.php';
 use DenDev\Plpwpskeleton\Skeleton;
 
 

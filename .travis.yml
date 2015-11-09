@@ -10,6 +10,6 @@ before_script:
   - composer self-update
   - composer install --prefer-source --no-interaction --dev
   - mysql -e "DROP DATABASE IF EXISTS wptest;" -uroot
-  - bash ./bin/install-wp-tests.sh wptest wptest wptest 
+  - bash ./bin/install-wp-tests.sh wptest travis '' 
  
 script: phpunit

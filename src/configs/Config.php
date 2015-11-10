@@ -39,9 +39,11 @@ class Config
     {
         // general
         $root_path = str_replace( 'src/configs', '', dirname( __FILE__ ) );
+        $root_url = str_replace( 'src/configs', '', plugins_url( '', __FILE__ ) );
+
 		$this->_config['root_path'] = $root_path;
 		$this->_config['assets_path'] = $root_path . 'assets/';
-		$this->_config['js_path'] = $root_path . 'assets/js/';
+		$this->_config['js_path'] = $root_url . 'assets/js/';
 		$this->_config['css_path'] = $root_path . 'assets/css/';
 		$this->_config['img_path'] = $root_path . 'assets/img/';
 

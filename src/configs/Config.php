@@ -38,7 +38,7 @@ class Config
 	private function _set_config()
     {
         // general
-        $root_path = str_replace( 'configs', '', dirname( __FILE__ ) );
+        $root_path = str_replace( 'src/configs', '', dirname( __FILE__ ) );
 		$this->_config['root_path'] = $root_path;
 		$this->_config['assets_path'] = $root_path . 'assets/';
 		$this->_config['js_path'] = $root_path . 'assets/js/';

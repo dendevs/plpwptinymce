@@ -8,7 +8,7 @@ tinymce.PluginManager.add('button_html', function(editor, url) {
 			editor.windowManager.open({
 				title: 'Créer un bouton',
 				body: [
-					{type: 'textbox', name: 'title', label: 'Title'}
+					{ type: 'textbox', name: 'title', label: 'Title' }
 				],
 				onsubmit: function(e) {
 					// Insert content when the window form is submitted

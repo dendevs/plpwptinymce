@@ -36,7 +36,19 @@ class Config
 
 	// -
 	private function _set_config()
-	{
+    {
+        // general
+        $root_path = str_replace( 'configs', '', dirname( __FILE__ ) );
+		$this->_config['root_path'] = $root_path;
+		$this->_config['assets_path'] = $root_path . 'assets/';
+		$this->_config['js_path'] = $root_path . 'assets/js/';
+		$this->_config['css_path'] = $root_path . 'assets/css/';
+		$this->_config['img_path'] = $root_path . 'assets/img/';
+
+        // specific
 		$this->_config['button_name'] = 'button_url';
+
+        // for phpunit
+		$this->_config['test'] = 'test ok';
 	}
 }

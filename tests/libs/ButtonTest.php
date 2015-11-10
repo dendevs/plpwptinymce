@@ -29,6 +29,18 @@ class ButtonTest extends \WP_UnitTestCase
 	{
 		$object = new ButtonLib( $this->_krl, $this->_config );
 		$object->add_button( 'bouton_test' );
+
         $this->assertContains( 'bouton_test' , $object->register_buttons_callback( array() ) );
 	}
+
+	public function test_register_tinemce_javascript_callback() 
+	{
+		$object = new ButtonLib( $this->_krl, $this->_config );
+		$object->add_button( 'bouton_test' );
+
+		$plugins_tinymce = $object->register_tinymce_javascript_callback( array() );
+		$this->assertArrayHasKey( 'bouton_test', $plugins_tinymce );
+		$this->assertStringEndsWith( 'src/assets/js/bouton_test.js', $plugins_tinymce['bouton_test'] );
+	}
+
 }

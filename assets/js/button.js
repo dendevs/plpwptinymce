@@ -1,9 +1,5 @@
-console.log( 'execute' );
 tinymce.PluginManager.add('myplugin', function(editor, url) {
-    console.log( 'execute js' );
 	// Add a button that opens a window
-    console.log( editor );
-    console.log( url );
 	editor.addButton('myplugin', {
 		text: 'My button',
 		icon: false,

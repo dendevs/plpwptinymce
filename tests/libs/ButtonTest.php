@@ -28,6 +28,7 @@ class ButtonTest extends \WP_UnitTestCase
 	public function test_register_buttons_callback() // drole d'idee!?
 	{
 		$object = new ButtonLib( $this->_krl, $this->_config );
-		//$this->assertTrue( $object->register_buttons_callback( array() ) );
+		$object->add_button( 'bouton_test' );
+        $this->assertContains( 'bouton_test' , $object->register_buttons_callback( array() ) );
 	}
 }

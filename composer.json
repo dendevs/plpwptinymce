@@ -16,7 +16,8 @@
     "autoload": {
         "psr-4": {
             "DenDev\\Plpwptinymce\\": "src",
-            "DenDev\\Plpwptinymce\\Lib\\": "src/libs"
+            "DenDev\\Plpwptinymce\\Lib\\": "src/libs",
+            "DenDev\\Plpwptinymce\\Config\\": "src/configs"
         }
     }
 }

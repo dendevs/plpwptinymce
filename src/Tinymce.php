@@ -1,20 +1,22 @@
 <?php
 namespace DenDev\Plpwptinymce;
-use DenDev\Plpwptinymce\Lib\Button;
+use DenDev\Plpwptinymce\TinymceInterface;
+use DenDev\Plpwptinymce\Lib\ButtonLib;
 
 
-class Tinymce
+class Tinymce extends Relationship implements TinymceInterface
 {
     private $_button;
 
 
-    public function __construct()
+    public function __construct( $krl = false, $config = false )
     {
-        $this->_button = new Button();
+        parent::__construct( $krl, $config );
+        $this->_button = new ButtonLib( $this->_krl, $this->_config );
     }
 
     public function add_button( $button_name )
     {
-        $this->_button->add_button( $button_name );
+        $this->_button->add_button( $button_name, $script_name );
     }
 }

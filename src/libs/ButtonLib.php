@@ -14,12 +14,12 @@ class ButtonLib
 	$this->_config = $config;
     }
 
-    public function add_button( $button_name, $script_path = false )
+    public function add_button( $button_name, $script_file = false )
     {  
-       	$script_path = ( $script_path ) ? $script_path : $button_name . '.js';
+       	$script_file = ( $script_file ) ? $script_file : $button_name . '.js';
 
 	$this->_config->set_value( 'button_name',  $button_name );
-	$this->_config->set_value( 'script_path',  $script_path );
+	$this->_config->set_value( 'script_file',  $script_file );
 
 	$ok_0 = add_filter('mce_buttons', array( $this, 'register_buttons_callback' ) );
 	$ok_1 = add_filter('mce_external_plugins', array( $this, 'register_tinymce_javascript_callback' ) );
@@ -39,9 +39,9 @@ class ButtonLib
     public function register_tinymce_javascript_callback( $plugin_array )
     {
 	$button_name = $this->_config->get_value( 'button_name' );
-	$script_path = $this->_config->get_value( 'script_path' );
+	$script_file = $this->_config->get_value( 'script_file' );
 
-	$plugin_array[$button_name] = $this->_config->get_value( 'js_path' ) . $script_path;
+	$plugin_array[$button_name] = $this->_config->get_value( 'js_path' ) . $script_file;
 	return $plugin_array;
     }
 }

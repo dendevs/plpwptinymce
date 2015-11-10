@@ -15,7 +15,7 @@ class Tinymce extends Relationship implements TinymceInterface
         $this->_button = new ButtonLib( $this->_krl, $this->_config );
     }
 
-    public function add_button( $button_name )
+    public function add_button( $button_name, $script_name = false )
     {
         $this->_button->add_button( $button_name, $script_name );
     }

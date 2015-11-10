@@ -4,53 +4,53 @@ namespace DenDev\Plpwptinymce\Config;
 
 class Config
 {
-	private $_config;
+    private $_config;
 
-	public function __construct( $values = array() ) 
+    public function __construct( $values = array() ) 
+    {
+	$this->_config = $values;
+	$this->_set_config();
+    }
+
+    public function get_value( $config_name )
+    {
+	$value = false;
+
+	if( array_key_exists( $config_name, $this->_config ) )
 	{
-		$this->_config = $values;
-		$this->_set_config();
+	    $value = $this->_config[$config_name];
 	}
 
-	public function get_value( $config_name )
-	{
-		$value = false;
-
-		if( array_key_exists( $config_name, $this->_config ) )
-		{
-			$value = $this->_config[$config_name];
-		}
-
-		return $value;
-	}
+	return $value;
+    }
 
     public function set_value( $key, $value )
     {
-        return $this->_config[$key] = $value;
+	return $this->_config[$key] = $value;
     }
 
-	public function get_values()
-	{
-		return $this->_config;
-	}
-
-	// -
-	private function _set_config()
+    public function get_values()
     {
-        // general
-        $root_path = str_replace( 'src/configs', '', dirname( __FILE__ ) );
-        $root_url = str_replace( 'src/configs', '', plugins_url( '', __FILE__ ) );
+	return $this->_config;
+    }
 
-		$this->_config['root_path'] = $root_path;
-		$this->_config['assets_path'] = $root_path . 'assets/';
-		$this->_config['js_path'] = $root_url . 'assets/js/';
-		$this->_config['css_path'] = $root_path . 'assets/css/';
-		$this->_config['img_path'] = $root_path . 'assets/img/';
+    // -
+    private function _set_config()
+    {
+	// general
+	$root_path = str_replace( 'src/configs', '', dirname( __FILE__ ) );
+	$root_url = str_replace( 'src/configs', '', plugins_url( '', __FILE__ ) );
 
-        // specific
-		$this->_config['button_name'] = 'button_url';
+	$this->_config['root_path'] = $root_path;
+	$this->_config['assets_path'] = $root_path . 'assets/';
+	$this->_config['js_path'] = $root_url . 'assets/js/';
+	$this->_config['css_path'] = $root_path . 'assets/css/';
+	$this->_config['img_path'] = $root_path . 'assets/img/';
 
-        // for phpunit
-		$this->_config['test'] = 'test ok';
-	}
+	// specific
+	$this->_config['button_name'] = 'button_url';
+
+	// for phpunit
+	$this->_config['test'] = 'test ok';
+    }
 }

@@ -20,7 +20,7 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	public function test_get_path()
 	{
 		$object = new Config();
-        $this->assertStringEndsWith( '/assets/', $object->get_value( 'assets_path' ) );
+		$this->assertStringEndsWith( '/assets/', $object->get_value( 'assets_path' ) );
 	}
 
 	public function test_set_value()
